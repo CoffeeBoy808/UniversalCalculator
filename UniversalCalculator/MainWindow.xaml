@@ -1,0 +1,34 @@
+﻿<Window x:Class="UniversalCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UniversalCalculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="374" Background="#FF5B2C5B">
+    <Window.Resources>
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Border BorderBrush="#FF5A185D" BorderThickness="2" CornerRadius="6"
+                    TextBlock.Foreground="Black" TextBlock.TextAlignment="">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStopCollection>
+                            <GradientStop Offset="0" Color="#FFB930BF"></GradientStop>
+                            <GradientStop Offset="1" Color="#FFB930BF"></GradientStop>
+                        </GradientStopCollection>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <ContentPresenter RecognizesAccessKey="True" Margin="0,0,-2,0"></ContentPresenter>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Test" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" Template="{StaticResource ButtonTemplate}" Height="35" Width="101" Background="#FFA459A1" Click="Button_Click">
+
+        </Button>
+
+    </Grid>
+</Window>
